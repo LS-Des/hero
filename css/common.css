@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+/*
+ * INDEX
+ * 01 - RESET CSS
+ * 02 - 전역 CSS 변수 (color/font-size/margin)
+ * 03 - 키프레임 애니메이션
+ * 04 - SMALL DEVICES (-430px)
+ * 05 - MEDIUM DEVICES (430px-)
+ */
+
+
+/* ************************************** *
+ * RESET CSS
+ * ************************************** */  
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,main,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;text-decoration: none;}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section{display:block}[hidden]{display:none}body{line-height:1}menu,ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}button{border: none;}
+
+/* ************************************** *
+ * 전역 CSS 변수
+ * ************************************** */  
+:root{
+  /* color */
+  --Primary: #ff971d;
+  --Secondary-red: #e03237;
+  --Secondary-blue: #22bdef;
+  --Secondary-violet: #9a51ff;
+  --Secondary-pink: #fc64ad;
+  --White: #fff;
+  --Black: #000;
+  --Gray-01: #282828;
+  --Gray-02: #494949;
+  --Gray-03: #888888;
+  --Gray-04: #d9d9d9;
+  --Gray-05: #f0f0f0;
+  --Gray-06: #f8f8f8;
+  --Black-opacity: rgba(0, 0, 0, .75);
+}
+
+/* ************************************** *
+ * 키프레임 애니메이션
+ * ************************************** */  
+@keyframes dongdong{
+  
+}
+/* ************************************** *
+ * SMALL DEVICES (-430px) MOBILE FIRST
+ * ************************************** */  
+
+ /* 태그 공통스타일 */
+html{font-size: 16px;}
+body{
+  width: 100%;
+  margin: auto; 
+  font-family: "Pretendard Variable", Pretendard, Roboto, sans-serif;
+  font-weight: 400; line-height: 1.4; letter-spacing: -0.8px;
+  color: var(--Gray-02);
+  overflow-x: hidden;
+  word-break: keep-all;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
+}
+a{color: var(--Gray-02);}
+
+/* 클래스 공통스타일 */
+.wrap{
+  width: 100%;
+  position: relative;
+}
+.inner{
+  padding: 0 20px;
+  box-sizing: border-box;
+  /* width: 90%; */
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+.inner.inner--start{
+  align-items: start;
+}
+
+/* font-클래스 공통스타일 */
+.bold{font-weight: 600;}
+.ex-bold{font-weight: 700;}
+
+/* scroll-클래스 공통스타일 */
+.scroll .txt{
+  transform: rotate(-8deg);
+}
+.scroll{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+}
+.scroll .arr{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+.scroll .arr span{
+  width: 0; height: 0;
+  left: -8px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+/* btn-클래스 공통스타일 */
+.btn{
+  padding: 12px 16px;
+  border-radius: 8px;
+  background: var(--Primary);
+  font-weight: 600;
+  font-size: 12px;
+  color: var(--White);
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+.btn:hover{
+  background-color: var(--White);
+  color: var(--Primary);
+  border: 1px solid var(--Primary);
+}
+.btn.btn--blue{
+  background: var(--Secondary-blue);
+  color: var(--White);
+}
+.btn:hover.btn--blue{
+  background: var(--White);
+  color: var(--Secondary-blue);
+  border: 1px solid var(--Secondary-blue);
+}
+
+/* swiper-클래스 공통스타일 */
+.swiper-pagination{
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.swiper-pagination .swiper-pagination-bullet {
+  width: 5px; height: 5px;
+  margin-right: 10px;
+  border-radius: 5px;
+  background-color: var(--Gray-04);
+  outline: none;
+}
+.swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
+}
+.swiper-pagination .swiper-pagination-bullet-active {
+  background-color: var(--Primary);
+}

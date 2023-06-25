@@ -1,0 +1,630 @@
+@charset "utf-8";
+
+/*
+ * INDEX
+ * 01 - HEADER
+ * 02 - MAIN
+ * 03 - VISUAL
+ * 04 - INFO
+ * 05 - SUBVISUAL
+ * 06 - SUBVISUAL-02
+ * 07 - STORE
+ * 08 - THEME
+ * 09 - FAQ
+ * 10 - FOOTER
+ */
+
+
+/* ************************************** *
+ * HEADER
+ * ************************************** */  
+header{
+  width: 100%;  height: 60px;
+  background: rgba(255, 255, 255, .2);
+  line-height: 60px;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+}
+header a{
+  font-size: 20px;
+  color: var(--White);
+}
+
+/* ************************************** *
+ * MAIN
+ * ************************************** */  
+main{
+  width: 100%;
+  position: relative;
+}
+
+/* ************************************** *
+ * VISUAL
+ * ************************************** */  
+#mainVisual{
+  height: 760px;
+  background: var(--Primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 30px;
+  box-sizing: border-box;
+}
+#mainVisual .visual{
+  width: 75%;
+  gap: 35px;
+}
+#mainVisual .visual figure{
+  width: 100%;
+}
+#mainVisual .visual figure img{
+  width: 100%;
+}
+#mainVisual .visual figcaption{
+  width: 90%;
+  margin: auto;
+}
+#mainVisual .scroll{
+  width: 30%;
+  left: 0; right: 0; bottom: 30px;
+}
+#mainVisual .scroll .arr span{
+  border-top: 8px solid var(--Secondary-red);
+}
+
+/* ************************************** *
+ * INFO
+ * ************************************** */  
+#info{
+  padding: 60px 0 160px 0;
+  background: var(--Primary);
+}
+#info::before{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0; margin: auto;
+  width: 100%; height: 100%;
+  background: url(../img/news_bg.png) no-repeat center center;
+  background-size: cover;
+  border-radius: 40px 40px 0 0;
+}
+#info h2{
+  width: 100%;
+  display: flex;
+  margin-bottom: 24px;
+}
+#info h2 img{
+  width: 112px;
+}
+#info h2::before{
+  width: 48px; height: 60px;
+  margin: -4px 8px 0 0;
+  background: url(../img/icon_notice.png) no-repeat center center;
+  background-size: contain;
+  display: block;
+  content: '';
+}
+#info .slide_wrap{
+  width: 270px; height: calc(270px + 44px);
+  padding: 8px 8px 44px 8px;
+  box-sizing: border-box;
+  border: 1px solid var(--Black);
+  background-color: #fff;
+  position: relative;
+  box-shadow: 7px 7px rgba(34, 102, 235, .5);
+}
+#info .swiper{
+  width: 100%;
+  height: 100%;
+}
+#info .swiper-wrapper{
+  width: calc(100% * 5);
+}
+#info .swiper-slide img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#info .swiper-button-prev,
+#info .swiper-button-next{
+  z-index: 1;
+  cursor: pointer;
+}
+#info .swiper-button-prev{
+  left: -4px; top: 280px;
+}
+#info .swiper-button-prev img{
+  width: 68px;
+  position: absolute;
+}
+#info .swiper-button-next{
+  right: -8px; top: 4px;
+}
+#info .swiper-button-next img{
+  width: 76px;
+  position: absolute;
+}
+#info .swiper-pagination {
+  left: 0;  right: 0;  bottom: 24px;
+}
+
+/* ************************************** *
+ * SUBVISUAL
+ * ************************************** */  
+#subVisual{
+  padding: 120px 0 250px 0;
+  color: var(--White);
+  border-radius: 40px 40px 0 0;
+  background: url(../img/subvisual_bg.png) no-repeat top center;
+  background-size: cover;
+}
+#subVisual::before{
+  width: 100%; height: 100%;
+  border-radius: 40px 40px 0 0;
+  background: var(--Black-opacity);
+  top: 0;
+  position: absolute;
+  content: '';
+}
+#subVisual::after{
+  content: '';
+  display: block;
+  width: 100%; height: 100%;
+  position: absolute;
+  top: 0; bottom: 0; right: 0; left: 0; margin: auto;
+  background: url(../img/news_bg.png) no-repeat center center;
+  background-size: cover;
+  z-index: -10;
+}
+#subVisual .heart span{
+  background: url(../img/heart_dot.png) no-repeat center center;
+  background-size: contain;
+  position: absolute;
+  z-index: 1;
+}
+#subVisual .heart span:nth-child(1){
+  width: 84px; height: 63px;
+  right: 40px; top: 40px;
+}
+#subVisual .heart span:nth-child(2){
+  width: 46px; height: 34px;
+  left: 35px; top: 190px;
+}
+#subVisual h2, #subVisual p{
+  text-align: center;
+}
+#subVisual h2{
+  margin-bottom: 20px;
+  font-size: 26px;
+  line-height: 1.1;
+}
+#subVisual p{
+  margin-bottom: 40px;
+  font-size: 14px;
+}
+#subVisual .sub-icon{
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+#subVisual .sub-icon li {
+  width: calc((100% - 1%)/3);
+}
+#subVisual .sub-icon li figure{
+  text-align: center;
+}
+#subVisual .sub-icon li figure img{
+  width: 82px;
+}
+#subVisual .scroll{
+  width: 180px;
+  left: 0; right: 0; bottom: 30px;
+}
+#subVisual .scroll .arr span{
+  border-top: 8px solid var(--White);
+}
+
+/* ************************************** *
+ * SUBVISUAL-02
+ * ************************************** */  
+#subVisual02{
+  padding-top: 100px;
+  background: var(--Black);
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 1;
+}
+#subVisual02 h2 img{
+  width: 180px;
+  padding: 0 20px;
+}
+/* #subVisual02 .swiper{
+  width: 100%;
+  height: 480px;
+} */
+#subVisual02 .park{
+  width: 100%;
+  overflow-x: hidden;
+}
+#subVisual02 .park::before{
+  content: '';
+  display: block;
+  position: absolute;
+  width: 200px; height: 180px;
+  top: 25px; right: 0;
+  background: url(../img/brand_txt_deco.png) no-repeat;
+  background-size: contain;
+  background-position-x: 50px;
+  background-position-y: center;
+  z-index: 10;
+}
+#subVisual02 .swiper .txt-box{
+  width: 232px; height: 272px;
+  margin: auto;
+  background: var(--Black-opacity);
+  padding: 30px 20px;
+  box-sizing: border-box;
+  top: 0; bottom: 0; left: 20px;
+  position: absolute;
+}
+#subVisual02 .swiper span{
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+}
+#subVisual02 .swiper p{
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+#subVisual02 .swiper .btn{
+  margin-bottom: 28px;
+}
+#subVisual02 .swiper-pagination {
+  position: absolute;
+  left: calc(-50% + 60px);
+  bottom: 120px;
+}
+#subVisual02 .swiper .swiper-slide{
+  width: 100%; height: 480px;
+  position: relative;
+}
+#subVisual02 .park .swiper-slide:nth-child(1){
+  background: url(../img/brand_playpark.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .park .swiper-slide:nth-child(2){
+  background: url(../img/brand_sports.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .park .swiper-slide:nth-child(3){
+  background: url(../img/brand_zoo.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .sports .swiper-slide:nth-child(1){
+  background: url(../img/brand_sports.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .sports .swiper-slide:nth-child(2){
+  background: url(../img/brand_zoo.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .sports .swiper-slide:nth-child(3){
+  background: url(../img/brand_playpark.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .zoo .swiper-slide:nth-child(1){
+  background: url(../img/brand_zoo.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .zoo .swiper-slide:nth-child(2){
+  background: url(../img/brand_playpark.jpg) no-repeat center center;
+  background-size: cover;
+}
+#subVisual02 .zoo .swiper-slide:nth-child(3){
+  background: url(../img/brand_sports.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+/* ************************************** *
+ * SUBVISUAL03
+ * ************************************** */  
+#subVisual03{
+  padding: 68px 0 80px 0;
+  background: var(--Black);
+  color: var(--White);
+}
+#subVisual03 h2{
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 16px;
+}
+#subVisual03 p{margin-bottom: 28px;}
+#subVisual03 .swiper{
+  width: calc(100% - 20px);
+}
+#subVisual03 .swiper-wrapper{
+  gap: 10px;
+  /* background-color: yellow; */
+}
+#subVisual03 .swiper-slide{
+  width: 290px; height: 470px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, .18);
+}
+
+
+/* #subVisual03 .swiper-slide{
+  display: flex;
+  flex-direction: column;
+} */
+
+/* 타이틀 */
+#subVisual03 .tit-wrap{
+  /* padding: 32px 20px; */
+  /* box-sizing: border-box; */
+  /* width: 260px; height: 275px; */
+  /* margin-bottom: var(--m-05); */
+  /* left: -200px; */
+  /* position: relative; */
+}
+#subVisual03 .tit-mask{
+  border-radius: 20px;
+  width: 170px; height: 170px;
+  transform: rotate(45deg);
+  overflow: hidden;
+  left: 0; right: 0; top: 52px;
+  margin: auto;
+  position: absolute;
+}
+#subVisual03 .tit{
+  width: 240px; height: 240px;
+  transform: rotate(-45deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -35px; right: 0; top: 0; bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+#subVisual03 .tit::before{
+  width: 100%; height: 100%;
+  background: url(../img/brand_playpark.jpg) no-repeat center ;
+  background-size: cover;
+  opacity: .2;
+  border-radius: 20px;
+  position: absolute;
+  display: block;
+  content: '';
+}
+/* 타이틀 모양 (정사각, 동그라미, 직사각) */
+#subVisual03 .diamond .tit-mask{
+  border-radius: 20px;
+}
+#subVisual03 .diamond .tit{
+  background: var(--Secondary-violet);
+  left: -35px; right: 0; top: 0; bottom: 0;
+}
+#subVisual03 .circle .tit-mask{
+  border-radius: 100%;
+}
+#subVisual03 .circle .tit{
+  background: var(--Secondary-blue);
+}
+/* 매장정보 */
+#subVisual03 .info{
+  padding: 24px 20px;
+  box-sizing: border-box;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+#subVisual03 .txt-wrap{
+  margin-bottom: 20px;
+}
+#subVisual03 .txt-wrap .name{
+  margin-bottom: 12px;
+  font-size: 16px;
+  color: var(--Secondary-violet);
+}
+#subVisual03 .txt-wrap li{
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: var(--White);
+}
+#subVisual03 .button-wrap{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#subVisual03 .button-wrap button{
+  width: calc(50% - 4px); height: 48px;
+}
+#subVisual03 .swiper-pagination{
+  left: 0;  right: 0;  bottom: -35px;
+}
+/* ************************************** *
+ * SUBVISUAL-04
+ * ************************************** */  
+#subVisual04{
+  padding: 80px 0 90px 0;
+  background: var(--Black);
+}
+#subVisual04 h2{
+  width: 215px;
+  margin-bottom: var(--m-05);
+}
+#subVisual04 .swiper-wrapper{
+  gap: 16px;
+}
+#subVisual04 .swiper-slide{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+#subVisual04 a{
+  padding: 40px 20px 20px 20px;
+  box-sizing: border-box;
+  color: var(--White);
+  border-radius: 20px;
+  display: block;
+}
+#subVisual04 .con1,.con2{
+  display: flex;
+  gap: 16px;
+}
+#subVisual04 .con1-01,#subVisual04 .con1-02,#subVisual04 .con2-01,#subVisual04 .con2-02{
+  position: relative;
+}
+#subVisual04 .con1-01{width: 56%; height: 280px; background: var(--Secondary-violet);}
+#subVisual04 .con1-02{width: 40%; height: 280px; background: var(--Secondary-pink);}
+#subVisual04 .con2-01{width: 42%; height: 190px; background: var(--Primary);}
+#subVisual04 .con2-02{width: 54%; height: 190px; background: var(--Secondary-blue);}
+#subVisual04 .con1-01:before{background: url(../img/brand_playpark.jpg);}
+#subVisual04 .con1-02:before{background: url(../img/brand_sports.jpg);}
+#subVisual04 .con2-01:before{background: url(../img/brand_zoo.jpg);}
+#subVisual04 .con2-02:before{background: url(../img/subvisual_bg.png);}
+#subVisual04 .con1-01::before,#subVisual04 .con1-02::before,
+#subVisual04 .con2-01::before,#subVisual04 .con2-02::before{
+  width: 100%; height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.2;
+  left: 0; top: 0;
+  position: absolute;
+  display: block;
+  content: '';
+}
+#subVisual04 .swiper{
+  width: 100%;
+}
+#subVisual04 .swiper-pagination{
+  left: 0;  right: 0;  bottom: -35px;
+}
+
+/* ************************************** *
+ * FAQ
+ * ************************************** */
+#faq .inner{
+  padding: 80px 0 50px 0;
+}
+#faq h2{
+  margin-bottom: var(--m-06);
+  font-size: var(--Display-04);
+}
+#faq h2 span:nth-child(1){
+  color: var(--Primary);
+}
+#faq .list{
+  width: 100%;
+  border-radius: 8px;
+  background: var(--Gray-06);
+}
+#faq .dep1{
+  padding: 15px 25px;
+  box-sizing: border-box;
+  border-bottom: 1px solid var(--Gray-05);
+}
+/* Q질문 타이틀 */
+#faq .q{
+  width: 100%;
+  font-size: var(--Body-04);
+  display: flex;
+  align-items: start;
+  position: relative;
+}
+#faq .q .ex-bold{
+  color: var(--Primary);
+  font-size: var(--Title-04);
+  margin-right: var(--m-02);
+}
+#faq .q-txt{
+  width: 80%;
+  margin-top: var(--m-03);
+}
+#faq .close-ico{
+  width: 28px; height: 28px;
+  margin: var(--m-02);
+  background: var(--Primary);
+  border-radius: 100%;
+  right: 0;
+  position: absolute;
+}
+#faq .close-ico span{
+  width: 16px; height: 2px;
+  background: var(--White);
+  border-radius: 100%;
+  left: 0; right: 0; top: 0; bottom: 0;
+  margin: auto;
+  position: absolute;
+}
+#faq .close-ico span:nth-child(2){
+  transform: rotate(-90deg);
+}
+#faq .dep1:hover .close-ico span:nth-child(1){
+  transform: rotate(45deg);
+}
+#faq .dep1:hover .close-ico span:nth-child(2){
+  transform: rotate(-45deg);
+}
+
+/* A대답 */
+#faq .a-wrap{
+  margin: var(--m-03) 0 var(--m-01);
+  background: var(--White);
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: none;
+}
+#faq .dep1:hover .a-wrap{
+  display: block;
+}
+#faq .a{
+  display: flex;
+}
+#faq .a span{
+  margin-right: var(--m-02);
+  font-size: var(--Title-01);
+  color: var(--Primary);
+}
+#faq .a p{
+  margin-top: var(--m-01);
+}
+/* ************************************** *
+ * FOOTER
+ * ************************************** */  
+footer{
+  color: var(--White);
+}
+footer .contact{
+  width: 100%;
+  padding: 80px 0;
+  background: var(--Primary);
+  font-size: 1.25rem;
+  display: flex; flex-direction: column; justify-content: center;
+  position: relative;
+}
+footer .contact::before{
+  width: 100%; height: 100%;
+  background: url(../img/subvisual_bg.png) no-repeat top;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: .17;
+  position: absolute;
+  display: block;
+  content: '';
+}
+footer .contact ul li{margin-bottom: var(--m-03);}
+footer .contact .bold{font-size: 1.5rem;}
+footer .info{
+  padding: 60px 0 50px 0; 
+  background: var(--Gray-01);
+  line-height: 1.6;
+}
+footer .copy{margin-top: var(--m-04); font-size: var(--Body-01);} 
