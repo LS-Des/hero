@@ -1,16 +1,16 @@
 import store from '../src/storeDB.js'
 
-new Swiper('#info .swiper', {
+new Swiper('#event .swiper', {
   autoplay: true, 
   loop: true,
   slidesPerView: 1,
   pagination: {
-    el: '#info .swiper-pagination',
+    el: '#event .swiper-pagination',
     clickable: true
   },
   navigation: {
-    prevEl: '#info .swiper-button-prev',
-    nextEl: '#info .swiper-button-next'
+    prevEl: '#event .swiper-button-prev',
+    nextEl: '#event .swiper-button-next'
   }
 })
 
@@ -62,35 +62,37 @@ new Swiper('.zoo .swiper', {
   }
 })
 
-new Swiper('.subVisual03 .swiper', {
+new Swiper('#info .swiper', {
+  // autoplay: true, 
+  loop: true,
+  slidesPerView: 1.3,
+  slidesPerGroup: 1,
+  spaceBetween: 45,
+  pagination: {
+    el: '#info .swiper-pagination',
+    clickable: true
+  },
+  navigation: {
+    prevEl: '#info .swiper-button-prev',
+    nextEl: '#info .swiper-button-next'
+  }
+})
+
+new Swiper('#subVisual04 .swiper', {
   // autoplay: true, 
   loop: true,
   slidesPerView: 1,
   pagination: {
-    el: '.subVisual03 .swiper-pagination',
+    el: '#subVisual04 .swiper-pagination',
     clickable: true
   },
   navigation: {
-    prevEl: '.subVisual03 .swiper-button-prev',
-    nextEl: '.subVisual03 .swiper-button-next'
+    prevEl: '#subVisual04 .swiper-button-prev',
+    nextEl: '#subVisual04 .swiper-button-next'
   }
 })
 
-new Swiper('.subVisual04 .swiper', {
-  // autoplay: true, 
-  loop: true,
-  slidesPerView: 1,
-  pagination: {
-    el: '.subVisual04 .swiper-pagination',
-    clickable: true
-  },
-  navigation: {
-    prevEl: '.subVisual04 .swiper-button-prev',
-    nextEl: '.subVisual04 .swiper-button-next'
-  }
-})
-
-const itemsEl = document.querySelector('#subVisual03 .swiper-wrapper')
+const itemsEl = document.querySelector('#info .swiper-wrapper')
 store.forEach(function(store){
   const itemEl = document.createElement('div')
   itemEl.classList.add('swiper-slide')

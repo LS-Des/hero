@@ -75,13 +75,13 @@ main{
 }
 
 /* ************************************** *
- * INFO
+ * EVENT
  * ************************************** */  
-#info{
+#event{
   padding: 60px 0 160px 0;
   background: var(--Primary);
 }
-#info::before{
+#event::before{
   content: '';
   display: block;
   position: absolute;
@@ -91,15 +91,15 @@ main{
   background-size: cover;
   border-radius: 40px 40px 0 0;
 }
-#info h2{
+#event h2{
   width: 100%;
   display: flex;
   margin-bottom: 24px;
 }
-#info h2 img{
+#event h2 img{
   width: 112px;
 }
-#info h2::before{
+#event h2::before{
   width: 48px; height: 60px;
   margin: -4px 8px 0 0;
   background: url(../img/icon_notice.png) no-repeat center center;
@@ -107,7 +107,7 @@ main{
   display: block;
   content: '';
 }
-#info .slide_wrap{
+#event .slide_wrap{
   width: 270px; height: calc(270px + 44px);
   padding: 8px 8px 44px 8px;
   box-sizing: border-box;
@@ -116,38 +116,38 @@ main{
   position: relative;
   box-shadow: 7px 7px rgba(34, 102, 235, .5);
 }
-#info .swiper{
+#event .swiper{
   width: 100%;
   height: 100%;
 }
-#info .swiper-wrapper{
+#event .swiper-wrapper{
   width: calc(100% * 5);
 }
-#info .swiper-slide img{
+#event .swiper-slide img{
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-#info .swiper-button-prev,
-#info .swiper-button-next{
+#event .swiper-button-prev,
+#event .swiper-button-next{
   z-index: 1;
   cursor: pointer;
 }
-#info .swiper-button-prev{
+#event .swiper-button-prev{
   left: -4px; top: 280px;
 }
-#info .swiper-button-prev img{
+#event .swiper-button-prev img{
   width: 68px;
   position: absolute;
 }
-#info .swiper-button-next{
+#event .swiper-button-next{
   right: -8px; top: 4px;
 }
-#info .swiper-button-next img{
-  width: 76px;
+#event .swiper-button-next img{
+  width: 62px;
   position: absolute;
 }
-#info .swiper-pagination {
+#event .swiper-pagination {
   left: 0;  right: 0;  bottom: 24px;
 }
 
@@ -333,40 +333,34 @@ main{
 }
 
 /* ************************************** *
- * SUBVISUAL03
+ * INFO
  * ************************************** */  
-#subVisual03{
+#info{
   padding: 68px 0 80px 0;
   background: var(--Black);
   color: var(--White);
 }
-#subVisual03 h2{
+#info .inner{
+  padding: 0 0 0 20px;
+}
+#info h2{
   font-size: 44px;
   line-height: 1.1;
   margin-bottom: 16px;
 }
-#subVisual03 p{margin-bottom: 28px;}
-#subVisual03 .swiper{
-  width: calc(100% - 20px);
+#info p{margin-bottom: 28px;}
+#info .swiper{
+  width: 100%;
 }
-#subVisual03 .swiper-wrapper{
-  gap: 10px;
-  /* background-color: yellow; */
-}
-#subVisual03 .swiper-slide{
-  width: 290px; height: 470px;
+#info .swiper-slide{
+  width: 280px; height: 470px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, .18);
+  background: #2E2E2E;
+  border-radius: 12px;
 }
-
-
-/* #subVisual03 .swiper-slide{
-  display: flex;
-  flex-direction: column;
-} */
 
 /* 타이틀 */
-#subVisual03 .tit-wrap{
+#info .tit-wrap{
   /* padding: 32px 20px; */
   /* box-sizing: border-box; */
   /* width: 260px; height: 275px; */
@@ -374,7 +368,7 @@ main{
   /* left: -200px; */
   /* position: relative; */
 }
-#subVisual03 .tit-mask{
+#info .tit-mask{
   border-radius: 20px;
   width: 170px; height: 170px;
   transform: rotate(45deg);
@@ -383,7 +377,7 @@ main{
   margin: auto;
   position: absolute;
 }
-#subVisual03 .tit{
+#info .tit{
   width: 240px; height: 240px;
   transform: rotate(-45deg);
   display: flex;
@@ -393,7 +387,7 @@ main{
   margin: auto;
   position: absolute;
 }
-#subVisual03 .tit::before{
+#info .tit::before{
   width: 100%; height: 100%;
   background: url(../img/brand_playpark.jpg) no-repeat center ;
   background-size: cover;
@@ -404,49 +398,49 @@ main{
   content: '';
 }
 /* 타이틀 모양 (정사각, 동그라미, 직사각) */
-#subVisual03 .diamond .tit-mask{
+#info .diamond .tit-mask{
   border-radius: 20px;
 }
-#subVisual03 .diamond .tit{
+#info .diamond .tit{
   background: var(--Secondary-violet);
   left: -35px; right: 0; top: 0; bottom: 0;
 }
-#subVisual03 .circle .tit-mask{
+#info .circle .tit-mask{
   border-radius: 100%;
 }
-#subVisual03 .circle .tit{
+#info .circle .tit{
   background: var(--Secondary-blue);
 }
 /* 매장정보 */
-#subVisual03 .info{
+#info .info{
   padding: 24px 20px;
   box-sizing: border-box;
   width: 100%;
   position: absolute;
   bottom: 0;
 }
-#subVisual03 .txt-wrap{
+#info .txt-wrap{
   margin-bottom: 20px;
 }
-#subVisual03 .txt-wrap .name{
+#info .txt-wrap .name{
   margin-bottom: 12px;
   font-size: 16px;
   color: var(--Secondary-violet);
 }
-#subVisual03 .txt-wrap li{
+#info .txt-wrap li{
   margin-bottom: 4px;
   font-size: 12px;
   color: var(--White);
 }
-#subVisual03 .button-wrap{
+#info .button-wrap{
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
-#subVisual03 .button-wrap button{
+#info .button-wrap button{
   width: calc(50% - 4px); height: 48px;
 }
-#subVisual03 .swiper-pagination{
+#info .swiper-pagination{
   left: 0;  right: 0;  bottom: -35px;
 }
 /* ************************************** *
