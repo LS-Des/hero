@@ -43,17 +43,17 @@ main{
  * VISUAL
  * ************************************** */  
 #mainVisual{
-  height: 760px;
+  height: 690px;
   background: var(--Primary);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 30px;
+  padding-bottom: 60px;
   box-sizing: border-box;
 }
 #mainVisual .visual{
-  width: 75%;
+  width: 270px;
   gap: 35px;
 }
 #mainVisual .visual figure{
@@ -67,7 +67,7 @@ main{
   margin: auto;
 }
 #mainVisual .scroll{
-  width: 30%;
+  width: 130px;
   left: 0; right: 0; bottom: 30px;
 }
 #mainVisual .scroll .arr span{
@@ -108,7 +108,7 @@ main{
   content: '';
 }
 #event .slide_wrap{
-  width: 270px; height: calc(270px + 44px);
+  width: 280px; height: calc(280px + 44px);
   padding: 8px 8px 44px 8px;
   box-sizing: border-box;
   border: 1px solid var(--Black);
@@ -137,14 +137,14 @@ main{
   left: -4px; top: 280px;
 }
 #event .swiper-button-prev img{
-  width: 68px;
+  width: 70px;
   position: absolute;
 }
 #event .swiper-button-next{
-  right: -8px; top: 4px;
+  right: 4px; top: 4px;
 }
 #event .swiper-button-next img{
-  width: 62px;
+  width: 70px;
   position: absolute;
 }
 #event .swiper-pagination {
@@ -536,7 +536,7 @@ main{
   gap: 8px;
 }
 #subVisual03 a{
-  padding: 40px 20px 20px 20px;
+  padding: 30px 20px 20px 20px;
   box-sizing: border-box;
   color: var(--White);
   border-radius: 20px;
@@ -674,7 +674,7 @@ footer{
 }
 footer .contact{
   width: 100%;
-  padding: 80px 0;
+  padding: 60px 0;
   background: var(--Primary);
   font-size: 1.25rem;
   /* display: flex; flex-direction: column; justify-content: center; */
@@ -694,7 +694,7 @@ footer .contact::before{
 footer .contact ul li{margin-bottom: 8px; font-size: 16px;}
 footer .contact .bold{font-size: 22px;}
 footer .info{
-  padding: 60px 0 50px 0; 
+  padding: 50px 0 40px 0; 
   background: var(--Gray-01);
   font-size: 14px;
   line-height: 1.6;
