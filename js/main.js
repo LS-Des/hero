@@ -65,6 +65,8 @@ new Swiper('.zoo .swiper', {
 new Swiper('#info .swiper', {
   loop: true,
   slidesPerView: "auto",
+  // slidesPerView: 1.5,
+  // slidesPerGroup: 1,
   spaceBetween: 10,
   pagination: {
     el: '#info .swiper-pagination',
@@ -72,17 +74,18 @@ new Swiper('#info .swiper', {
   }
 })
 
-new Swiper('#subVisual04 .swiper', {
+new Swiper('#subVisual03 .swiper', {
   // autoplay: true, 
   loop: true,
   slidesPerView: 1,
+  slidesPerGroup: 1,
   pagination: {
-    el: '#subVisual04 .swiper-pagination',
+    el: '#subVisual03 .swiper-pagination',
     clickable: true
   },
   navigation: {
-    prevEl: '#subVisual04 .swiper-button-prev',
-    nextEl: '#subVisual04 .swiper-button-next'
+    prevEl: '#subVisual03 .swiper-button-prev',
+    nextEl: '#subVisual03 .swiper-button-next'
   }
 })
 

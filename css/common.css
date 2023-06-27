@@ -71,7 +71,6 @@ a{color: var(--Gray-02);}
 .inner{
   padding: 0 20px;
   box-sizing: border-box;
-  /* width: 90%; */
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -125,7 +124,7 @@ a{color: var(--Gray-02);}
 .btn:hover{
   background-color: var(--White);
   color: var(--Primary);
-  border: 1px solid var(--Primary);
+  /* border: 1px solid var(--Primary); */
 }
 .btn.btn--blue{
   background: var(--Secondary-blue);
@@ -134,7 +133,7 @@ a{color: var(--Gray-02);}
 .btn:hover.btn--blue{
   background: var(--White);
   color: var(--Secondary-blue);
-  border: 1px solid var(--Secondary-blue);
+  /* border: 1px solid var(--Secondary-blue); */
 }
 
 /* swiper-클래스 공통스타일 */
@@ -156,3 +155,4 @@ a{color: var(--Gray-02);}
 .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--Primary);
 }
+
