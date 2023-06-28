@@ -1,5 +1,6 @@
 import store from '../src/storeDB.js'
 
+// 슬라이드-이벤트
 new Swiper('#event .swiper', {
   autoplay: true, 
   loop: true,
@@ -14,6 +15,7 @@ new Swiper('#event .swiper', {
   }
 })
 
+// 슬라이드-컨텐츠
 new Swiper('.park .swiper', {
   // autoplay: true, 
   loop: true,
@@ -62,6 +64,7 @@ new Swiper('.zoo .swiper', {
   }
 })
 
+// 슬라이드-매장
 new Swiper('#info .swiper', {
   loop: true,
   slidesPerView: "auto",
@@ -74,6 +77,7 @@ new Swiper('#info .swiper', {
   }
 })
 
+// 슬라이드-테마이미지
 new Swiper('#subVisual03 .swiper', {
   // autoplay: true, 
   loop: true,
@@ -89,6 +93,35 @@ new Swiper('#subVisual03 .swiper', {
   }
 })
 
+// 토글-faq
+$('#faq .btn').on('click', function(){
+  let active = $(this).hasClass('active');
+  let answer = $(this).parent().next('.answer');
+
+  if(!active){
+    $(this).addClass('active');
+    answer.addClass('active');
+    answer.slideDown(300);
+  } else {
+    $(this).removeClass('active');
+    answer.removeClass('active');
+    answer.slideUp(300);
+  }
+})
+
+  // 플레이테마 박스 클릭 시 모달 등장
+  $("#subVisual03 .mo1").on('click', function(){
+    $(".wrap_modal").addClass('active');
+    $("html").addClass('scroll_lock');
+  });
+
+  // 모달 닫기
+  $(".bg_modal, .wrap_modal .btn_close button").on('click', function(){
+    $(".wrap_modal").removeClass('active');
+    $("html").removeClass('scroll_lock');
+  })
+
+// data연동
 const itemsEl = document.querySelector('#info .swiper-wrapper')
 store.forEach(function(store){
   const itemEl = document.createElement('div')

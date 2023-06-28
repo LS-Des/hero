@@ -535,7 +535,7 @@ main{
   flex-direction: column;
   gap: 8px;
 }
-#subVisual03 a{
+#subVisual03 a, .mo1{
   padding: 30px 20px 20px 20px;
   box-sizing: border-box;
   color: var(--White);
@@ -588,84 +588,118 @@ main{
 #faq h2 span:nth-child(1){
   color: var(--Primary);
 }
-#faq .list{
-  width: calc(100% - 40px);
-  border-radius: 8px;
-  background: var(--Gray-06);
+#faq .tit::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -72px;
+  left: 26px;
+  width: 112px;
+  height: 119px;
+  background: url("../img/faq_ctr.png") no-repeat;
 }
-#faq .dep1{
-  padding: 10px 15px;
-  box-sizing: border-box;
-  border-bottom: 1px solid var(--Gray-05);
+#faq .tit img{
+  width: 70px;
+  margin-bottom: -28px;
 }
-/* Q질문 타이틀 */
-#faq .q{
-  width: 100%;
-  font-size: 16px;
+#faq .tit .inner_txt{
+  background-color: #FF9329;
+  border-radius: 20px;
   display: flex;
-  align-items: start;
-  position: relative;
+  flex-direction: column;
 }
-#faq .q .ex-bold{
+#faq .tit h2{
+  padding-top: 36px;
+  padding-bottom: 20px;
+}
+#faq .tit h2 p{
+  font-weight: 700;
+  color: #fff;
+  font-size: 32px;
+  line-height: 1.2;
+}
+#faq .list_faq{
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 15px;
+}
+#faq .list_faq .question{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #F0F0F0;
+  padding: 16px 0;
+}
+#faq .list_faq .question:first-child{
+  border-top: 0;
+}
+#faq .list_faq .txt{
+  width: 100%;
+  font-size: 18px;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#faq .list_faq .txt .icon{
   color: var(--Primary);
-  font-size: 26px;
-  margin-right: 8px;
+  font-size: 32px;
+  font-weight: 600;
 }
-#faq .q-txt{
-  width: 70%;
-  margin-top: 8px;
-}
-#faq .close-ico{
-  width: 28px; height: 28px;
-  margin: 5px;
+#faq .list_faq .btn{
+  padding: 4px;
+  position: relative;
+  width: 28px;
+  height: 28px;
+  border-radius: 100%;
+  cursor: pointer;
   background: var(--Primary);
-  border-radius: 100%;
-  right: 0;
-  position: absolute;
 }
-#faq .close-ico span{
-  width: 16px; height: 2px;
-  background: var(--White);
-  border-radius: 100%;
-  left: 0; right: 0; top: 0; bottom: 0;
+#faq .ltor{
+  height: 2px;
+  width: 13px;
+  padding: 0 0 0 0;
+  position: absolute;
+  top: 0; bottom: 0; right: 6px; bottom: 0;
   margin: auto;
-  position: absolute;
-}
-#faq .close-ico span:nth-child(2){
+  background-color: var(--White);
+  border-radius: 2px;
   transform: rotate(-90deg);
+  transition: all .4s ease-in;
 }
-#faq .dep1:hover .close-ico span:nth-child(1){
+#faq .rtol{
+  height: 2px;
+  width: 13px;
+  padding: 0 0 0 0;
+  position: absolute;
+  top: 0; bottom: 0; right: 6px; bottom: 0;
+  margin: auto;
+  background-color: var(--White);
+  border-radius: 2px;
+  transform: rotate(180deg);
+  transition: all .4s ease-in;
+}
+#faq .list_faq .btn.active .ltor{
   transform: rotate(45deg);
+  background-color: var(--White);
 }
-#faq .dep1:hover .close-ico span:nth-child(2){
+#faq .list_faq .btn.active .rtol{
   transform: rotate(-45deg);
+  background-color: var(--White);
+}
+#faq .list_faq .answer{
+  display: none;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  padding: 12px 20px;
+  margin-top: 8px;
+  margin-bottom: 10px;
+  background-color: #F5F7FC;
+  border-radius: 8px;
 }
 
-/* A대답 */
-#faq .a-wrap{
-  margin: 12px 0 12px;
-  background: var(--White);
-  border-radius: 8px;
-  padding: 10px 12px;
-  display: none;
-}
-#faq .dep1:hover .a-wrap{
-  display: block;
-}
-#faq .a{
-  display: flex;
-}
-#faq .a .bold{
-  font-size: 18px;
-}
-#faq .a span{
-  margin-right: 8px;
-  font-size: 14px;
-  color: var(--Primary);
-}
-#faq .a p{
-  margin-top: 4px;
-}
 /* ************************************** *
  * FOOTER
  * ************************************** */  
@@ -702,3 +736,92 @@ footer .info{
 footer .info li{display: flex;}
 footer .info .bold{margin-right: 8px;}
 footer .copy{margin-top: 28px; font-size: 12px;} 
+
+/* 모달 */
+.wrap_modal{
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.wrap_modal.active{
+  display: block;
+}
+.bg_modal{
+  width: 100%;
+  height: 100vh;
+  background: rgba(17, 17, 17, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal_mo1{
+  padding: 80px 50px;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.modal_mo1 h3{
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--Secondary-violet);
+}
+.modal_mo1 p{
+  font-size: 12px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+.modal_mo1 img{
+  width: 100%;
+  /* height: 200px; */
+  object-fit: fill;
+}
+
+.modal_mo1 .btn_close{
+  /* background-color: #fff; */
+  width: 100%;
+  /* padding: 20px 20px 60px 20px; */
+  position: absolute;
+  bottom: 0; right: 0;
+}
+.modal_mo1 .btn_close button{
+  width: 100%;
+  padding: 14px 0;
+  background-color: #494949;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .modal_mo1{
+      width: 90%;
+      max-width: 768px;
+      height: 90vh;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+      border-radius: 20px;
+  }
+  .modal_mo1 .wrap_box{
+      padding: 28px 20px 100px 20px;
+  }
+  .modal_mo1 .wrap_box .box{
+      width: 32%;
+  }
+  .modal_mo1 .box figcaption{
+      font-size: 18px;
+  }
+  .modal_mo1 .btn_close{
+      padding: 20px;
+  }
+}

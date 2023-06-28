@@ -12,10 +12,13 @@
   <!-- 슬라이드 자바스크립트 -->
   <link
   rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+  href="./css/swiper-bundle.css"
 />
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script defer type="module" src="./js/main.js"></script>
+<script src="./js/jquery-2.2.4.js"></script>
+<!-- <script src="./js/jquery-ui.js"></script> -->
+<!-- <script src="./js/jquery.easing.1.3.js"></script> -->
+<script defer type="module" src="./js/main.js"></script>
 </head>
 <body>
   <!-- HEADER -->
@@ -257,7 +260,7 @@
             <!-- //DB연결 -->
           </div>
         </div>
-        <!-- <div class="swiper-pagination"></div> -->
+        <div class="swiper-pagination"></div>
       </div>
     </section>
     <!-- //INFO -->
@@ -269,7 +272,8 @@
           <ul class="swiper-wrapper">
             <li class="swiper-slide">
               <div class="con1">
-                <a href="javascript:void(0)" class="con1-01">동물원</a>
+                <!-- <div class="con1-01 mo1">동물원</div> -->
+                <a href="javascript:void(0)" class="con1-01 mo1">동물원</a>
                 <a href="javascript:void(0)" class="con1-02">트램폴린</a>
               </div>
               <div class="con2">
@@ -327,60 +331,53 @@
     <section id="faq" class="wrap">
       <div class="inner">
         <h2 class="ex-bold"><span>F</span><span>AQ</span></h2>
-        <ul class="list">
-          <li class="dep1">
-            <ul>
-              <li class="q">
-                <span class="ex-bold">Q</span>
-                <span class="q-txt">이용제한 시간이 있나요?기구점검 및 점심시간 12시~14시까지 이용 제한이
-                  있습니다.  워터파크 각 50분 이</span>
-                <div class="close-ico"><span></span><span></span></div>
-              </li>
-              <li class="a-wrap">
-                <div class="a">
-                  <span class="bold">A</span>
-                  <p>기구점검 및 점심시간 12시~14시까지 이용 제한이
-                    있습니다.  워터파크 각 50분 이용, 10분 휴식으로
-                    진행됩니다.</p>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li class="dep1">
-            <ul>
-              <li class="q">
-                <span class="ex-bold">Q</span>
-                <span class="q-txt">이용제한 시간이 있나요?</span>
-                <div class="close-ico"><span></span><span></span></div>
-              </li>
-              <li class="a-wrap">
-                <div class="a">
-                  <span class="bold">A</span>
-                  <p>기구점검 및 점심시간 12시~14시까지 이용 제한이
-                    있습니다.  워터파크 각 50분 이용, 10분 휴식으로
-                    진행됩니다.</p>
-                </div>
-              </li>
-            </ul>
-          </li>
-          <li class="dep1">
-            <ul>
-              <li class="q">
-                <span class="ex-bold">Q</span>
-                <span class="q-txt">이용제한 시간이 있나요?</span>
-                <div class="close-ico"><span></span><span></span></div>
-              </li>
-              <li class="a-wrap">
-                <div class="a">
-                  <span class="bold">A</span>
-                  <p>기구점검 및 점심시간 12시~14시까지 이용 제한이
-                    있습니다.  워터파크 각 50분 이용, 10분 휴식으로
-                    진행됩니다.</p>
-                </div>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <dl class="list_faq">
+          <dt class="question">
+              <span class="txt">
+                  <span class="icon">Q</span>
+                  몇살까지 이용할 수 있나요?
+              </span>
+              <button type="button" class="btn">
+                <span class="ltor"></span>
+                <span class="rtol"></span>
+              </button>
+          </dt>
+          <dd class="answer" style="display: none;">
+              <span class="context">
+                  13세까지 입장가능하며, 14세 이상은 동의서 작성 후 성인 요금으로 입장 가능합니다.
+              </span>
+          </dd>
+          <dt class="question">
+              <span class="txt">
+                  <span class="icon">Q</span>
+                  외부 음식이 반입 가능한가요?
+              </span>
+              <button type="button" class="btn active_btn">
+                <span class="ltor"></span>
+                <span class="rtol"></span>
+              </button>
+          </dt>
+          <dd class="answer" style="display: none;">
+              <span class="context">
+                  히어로플레이파크는 깨끗하고 쾌적한 환경을 위하여 외부음식물 반입을 금지하고 있습니다.
+              </span>
+          </dd>
+          <dt class="question">
+              <span class="txt">
+                  <span class="icon">Q</span>
+                  유모차를 히어로 키즈파크 내부에서 이용할 수 있나요?
+              </span>
+              <button type="button" class="btn active_btn">
+                <span class="ltor"></span>
+                <span class="rtol"></span>
+              </button>
+          </dt>
+          <dd class="answer" style="display: none;">
+              <span class="context">
+                유모차는 유모차 보관대에 보관가능하며, 파크 내 반입은 금지하고 있습니다.
+              </span>
+          </dd>
+      </dl>
       </div>
     </section>
     <!-- //FAQ -->
@@ -412,4 +409,28 @@
     </div>
   </footer>
   <!-- //FOOTER -->
+  <!-- MODAL -->
+  <div class="wrap_modal">
+    <div class="bg_modal"></div>
+    <!-- 동물원 -->
+    <section class="modal_mo1">
+      <div class="txt_wrap">
+        <h3 class="tit">동물원</h3>
+        <p class="des">
+          동물원 설명중....
+          동물원 설명중....
+          동물원 설명중....
+          동물원 설명중....
+        </p>
+      </div>
+      <div class="img_wrap">
+        <img src="./img/brand_zoo.jpg" alt="갤러리">
+        <img src="./img/brand_zoo.jpg" alt="갤러리">
+      </div>
+      <div class="btn_close">
+        <button>닫기</button>
+      </div>
+    </section>
+</div>
+  <!-- ///MODAL -->
   </main>
