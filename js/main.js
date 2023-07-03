@@ -67,9 +67,9 @@ new Swiper('.zoo .swiper', {
 // 슬라이드-매장
 new Swiper('#info .swiper', {
   loop: true,
-  slidesPerView: "auto",
-  // slidesPerView: 1.5,
-  // slidesPerGroup: 1,
+  // slidesPerView: "auto",
+  slidesPerView: 1.2,
+  // slidesPerGroup: 1.5,
   spaceBetween: 10,
   pagination: {
     el: '#info .swiper-pagination',
@@ -122,36 +122,36 @@ $('#faq .btn').on('click', function(){
   })
 
 // data연동
-const itemsEl = document.querySelector('#info .swiper-wrapper')
-store.forEach(function(store){
-  const itemEl = document.createElement('div')
-  itemEl.classList.add('swiper-slide')
-  itemEl.innerHTML = /* html */ `
-    <div class="tit-wrap">
-      <div class="tit-mask diamond"><img src="${store.thumbnail}" alt="${store.name}" class="tit"></div>
-    </div>
-    <div class="info">
-        <ul class="txt-wrap">
-          <li class="name ex-bold">${store.name}</li>
-          <li>
-            <span class="bold">매장주소</span>
-            <span>${store.add}</span>
-          </li>
-          <li>
-            <span class="bold">전화번호</span>
-            <span>${store.tel}</span>
-          </li>
-          <li>
-            <span class="bold">영업시간</span>
-            <span>${store.time}</span>
-          </li>
-        </ul>
-        <div class="button-wrap">
-          <button class="btn btn--blue">지도</button>
-          <button class="btn">유선문의</button>
-        </div>
-    </div>
-  `
+// const itemsEl = document.querySelector('#info .swiper-wrapper')
+// store.forEach(function(store){
+//   const itemEl = document.createElement('div')
+//   itemEl.classList.add('swiper-slide')
+//   itemEl.innerHTML = /* html */ `
+//     <div class="tit-wrap">
+//       <div class="tit-mask diamond"><img src="${store.thumbnail}" alt="${store.name}" class="tit"></div>
+//     </div>
+//     <div class="info">
+//         <ul class="txt-wrap">
+//           <li class="name ex-bold">${store.name}</li>
+//           <li>
+//             <span class="bold">매장주소</span>
+//             <span>${store.add}</span>
+//           </li>
+//           <li>
+//             <span class="bold">전화번호</span>
+//             <span>${store.tel}</span>
+//           </li>
+//           <li>
+//             <span class="bold">영업시간</span>
+//             <span>${store.time}</span>
+//           </li>
+//         </ul>
+//         <div class="button-wrap">
+//           <button class="btn btn--blue">지도</button>
+//           <button class="btn">유선문의</button>
+//         </div>
+//     </div>
+//   `
 
-  itemsEl.append(itemEl)
-})
+//   itemsEl.append(itemEl)
+// })
